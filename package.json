@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js",
-    "build": "npm i",
-    "render-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "server": "nodemon backend/server.js",
+    "frontend": "npm start --prefix ./frontend",
+    "dev": "concurrently \"npm start\" \"npm run frontend\""
   },
   "author": "",
   "license": "ISC",
